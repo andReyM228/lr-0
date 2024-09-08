@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Click the Ball!</h1>
+    <div class="ball" id="ball"></div>
+</div>
+
+<script>
+    const ball = document.getElementById('ball');
+    ball.addEventListener('click', function() {
+        ball.classList.add('bounce');
+        setTimeout(() => {
+            ball.classList.remove('bounce');
+        }, 1000);  // Остановка анимации через 1 секунду
+    });
+</script>
+</body>
+</html>
+
